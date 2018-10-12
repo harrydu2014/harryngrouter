@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<a [routerLink]="['/home']">HOME</a>
+<br>
+<!-- <a [routerLink]="['/stock']" [queryParams]="{id:1}">STOCK</a> -->
+<a [routerLink]="['/stock', 1]">STOCK</a>
+<br>
+<input type="button" value="STOCK" (click)="toStockDetail()">
