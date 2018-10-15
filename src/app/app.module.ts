@@ -8,6 +8,10 @@ import { StockComponent } from './stock/stock.component';
 import { Code404Component } from './code404/code404.component';
 import { BuyerListComponent } from './buyer-list/buyer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
+import { ConsultComponent } from './consult/consult.component';
+import { PermissionGuard } from './guard/permission.guard';
+import { FocusGuard } from './guard/focus.guard';
+import { StockResolve } from './guard/stock.resolve';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,18 @@ import { SellerListComponent } from './seller-list/seller-list.component';
     StockComponent,
     Code404Component,
     BuyerListComponent,
-    SellerListComponent
+    SellerListComponent,
+    ConsultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    PermissionGuard,
+    FocusGuard,
+    StockResolve
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

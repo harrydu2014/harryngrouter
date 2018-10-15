@@ -1,13 +1,21 @@
-<p>
-  This is the stock component!
-</p>
-<p>
-  Stock ID : {{stockId}}
-</p>
-<p>
-  isProd : {{isProd}}
-</p>
-<a [routerLink]="['./']">Buyer List</a>
-<br>
-<a [routerLink]="['./seller', 100]">Seller List</a>
-<router-outlet></router-outlet>
+<div class="stock">
+  <p>
+    This is the stock component!
+  </p>
+  <p>
+    Stock ID : {{stock.id}}
+  </p>
+  <p>
+    Stock Name : {{stock.name}}
+  </p>
+  <p>
+    isProd : {{isProd}}
+  </p>
+  <p>
+    <input type="button" (click)="focus = true" value="favourite">
+  </p>
+  <a [routerLink]="['./']">Buyer List</a>
+  <br>
+  <a [routerLink]="['./seller', 100]">Seller List</a>
+  <router-outlet></router-outlet>
+</div>
